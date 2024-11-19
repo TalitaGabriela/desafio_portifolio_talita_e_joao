@@ -1,9 +1,9 @@
 :root {
-    --soft-blue: hsl(215, 51%, 70%);
-    --cyan: hsl(178, 100%, 50%);
-    --very-dark-blue-main-bg: hsl(217, 54%, 11%);
-    --very-dark-blue-card-bg: hsl(216, 50%, 16%);
-    --very-dark-blue-line: hsl(215, 32%, 27%);
+    --soft-red: hsl(0, 52%, 70%);
+    --cyan: hsl(0, 100%, 50%);
+    --very-dark-red-main-bg: hsl(0, 54%, 11%);
+    --very-dark-red-card-bg: hsl(0, 51%, 16%);
+    --very-dark-red-line: hsl(0, 32%, 27%);
     --white: hsl(0, 0%, 100%);
 }
 
@@ -15,14 +15,74 @@
 }
 
 body {
-    background-color: var(--very-dark-blue-main-bg);
-    color: var(--soft-blue);
+    background-color: var(--very-dark-red-main-bg);
+    color: var(--soft-red);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     padding: 1rem;
+}
+
+header {
+    width: 100%;
+}
+
+.navbar {
+    width: 100%;
+    max-width: 100%; /* Garante que o navbar ocupe a largura total */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--white);
+    color: var(--very-dark-red-line);
+}
+
+.logo {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    gap: 10px; /* Espaço entre a logo e o texto */
+}
+
+.logo img {
+    width: 100px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+}
+
+.logo h1 {
+    font-size: 1.5rem; /* Ajuste conforme desejado */
+    color: var(--very-dark-red-line);
+    margin: 0; /* Remove margens padrão do H1 */
+    font-weight: 600;
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+}
+
+.button {
+    background-color: var(--soft-red);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background-color: var(--cyan);
+    transform: scale(1.1);
 }
 
 .container {
@@ -32,6 +92,7 @@ body {
     width: 100%;
     padding: 1rem;
     flex-grow: 1;
+    margin: 10px;
 }
 
 .cards-container {
@@ -44,8 +105,19 @@ body {
     margin: 0 auto;
 }
 
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
 .card {
-    background-color: var(--very-dark-blue-card-bg);
+    background-color: var(--very-dark-red-card-bg);
     border-radius: 15px;
     overflow: hidden;
     padding: 1rem;
@@ -54,6 +126,7 @@ body {
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
+    animation: fadeInUp 0.5s ease-in-out;
 }
 
 .card:hover {
@@ -76,7 +149,7 @@ body {
 .card-descricao {
     font-size: 0.875rem;
     font-weight: 300;
-    color: var(--soft-blue);
+    color: var(--soft-red);
     margin-bottom: 1rem;
 }
 
@@ -89,7 +162,7 @@ body {
 }
 
 .preco {
-    color: var(--cyan);
+    color: var(--white);
     display: flex;
     align-items: center;
 }
@@ -98,20 +171,20 @@ body {
     margin-right: 0.3rem;
 }
 
-.horario {
-    color: var(--soft-blue);
+.icon {
+    color: var(--soft-red);
     display: flex;
     align-items: center;
 }
 
-.horario img {
+.icon img {
     margin-right: 0.3rem;
 }
 
 .criador {
     display: flex;
     align-items: center;
-    border-top: 1px solid var(--very-dark-blue-line);
+    border-top: 1px solid var(--very-dark-red-line);
     padding-top: 1rem;
     margin-top: 1rem;
 }
@@ -135,7 +208,7 @@ body {
 .atribuicao {
     font-size: 0.75rem;
     text-align: center;
-    color: var(--soft-blue);
+    color: var(--soft-red);
     margin-top: auto;
 }
 
