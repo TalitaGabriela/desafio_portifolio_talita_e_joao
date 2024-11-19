@@ -35,7 +35,7 @@ Este é o Portfólio 1.0, desenvolvido como parte de um desafio para criação d
 
 ## Tecnologias Utilizadas
 
-- HTML e CSS
+- HTML, CSS e JS
 - [Leonardo.ia](https://app.leonardo.ai/) - para geração de imagens e logo do projeto
 - [Animate.css](https://animate.style/) - para animações
 - Git e GitHub - para versionamento e hospedagem do projeto no GitHub Pages
