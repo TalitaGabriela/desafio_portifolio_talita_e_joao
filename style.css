@@ -65,10 +65,59 @@ header {
     gap: 15px;
     padding: 0;
     margin: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .nav-links a {
     text-decoration: none;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: var(--very-dark-red-line);
+    transition: background-color 0.3s;
+}
+
+.menu-toggle:hover span {
+    background: var(--soft-red);
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex; /* Mostra o botão "hambúrguer" */
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: var(--white);
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        transform: translateY(-200%);
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
 }
 
 .button {
