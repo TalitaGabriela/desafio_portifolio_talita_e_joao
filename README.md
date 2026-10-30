@@ -43,10 +43,10 @@ Este é o Portfólio 1.0, desenvolvido como parte de um desafio para criação d
 
 ## Estrutura de Branches
 
-- `main`: Branch principal com o projeto completo.
-- `card-nft`: Branch da Fase 1.0 para o desenvolvimento do componente `CardNFT`.
-- `card-list`: Branch da Fase 1.1 para o desenvolvimento do componente `CardList`.
-- `header`: Branch da Fase 1.2 para o desenvolvimento do componente `Header`.
+- `master`: Branch principal com o projeto completo.
+- `feature/1.0_and_1.1`: Branch de desenvolvimento das Fases 1.0 (`CardNFT`) e 1.1 (`CardList`).
+- `feature/stage1.2`: Branch de desenvolvimento da Fase 1.2 (`Header`).
+- `bugfix/stage1.2`: Branch de correções sobre a Fase 1.2.
 
 ## Instalação e Uso
 
